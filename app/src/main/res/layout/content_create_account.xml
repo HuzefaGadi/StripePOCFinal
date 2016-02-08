@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize"
+
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="saiflimited.com.stripepoc.CreateAccountActivity"
+    tools:showIn="@layout/activity_create_account">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:id="@+id/relativeLayout">
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:hint="Name"
+            android:layout_marginTop="10dp"
+            android:inputType="textPersonName"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/emailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/username"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/username"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/emailAddress"
+            android:layout_centerHorizontal="true"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textSize="20dp" />
+
+        <Spinner
+            android:id="@+id/country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/password"
+            android:layout_centerHorizontal="true"
+            android:entries="@array/country"
+            android:spinnerMode="dialog" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="100"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:background="@color/mainColor"
+        android:text="Next"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"  />
+</RelativeLayout>
